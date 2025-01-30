@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 function ChangeHeading() {
-  const [heading, setHeading] = useState("My heading");
+  const [heading, setHeading] = useState("My headingg");
 
   return (
     <div>
