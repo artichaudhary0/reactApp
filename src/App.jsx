@@ -1,23 +1,26 @@
-import { useState } from "react";
+import Counter from "./components/Counter";
+import ChangeHeading from "./components/ChangeHeading";
 
 function App2() {
-  // let count = 0;
-
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      {/*  */}
-      <h1>{count}</h1>
-      <button
+      <ChangeHeading />
+      <Counter />
+
+      {/*onclick == html , camel case => onClick   ,   fun() => html*/}
+
+      {/* <button onClick={change}>Change heading</button> */}
+
+      {/* <button onClick={() => change()}>Change heading</button> */}
+      {/* <button
         onClick={() => {
-          setCount(count + 1);
-          // count = count + 1;
-          // console.log(count);
+          setHeading("My paragraph");
+          // change();
+          // heading = "Paragraph";
         }}
       >
-        Increment
-      </button>
+        Change heading
+      </button> */}
     </>
   );
 }
