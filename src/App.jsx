@@ -11,7 +11,7 @@ function App2() {
     console.log("key Press : ", e.key);
   };
 
-  const [color, setColor] = useState("grey");
+  const [color, setColor] = useState("grey")
   const [toggle, setToggle] = useState(false);
 
   return (
