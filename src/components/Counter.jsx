@@ -12,7 +12,14 @@ function Counter() {
       <h1>Counter : {counter}</h1>
       <button onClick={increment}>Increment</button>
       <button onClick={reset}>Reset</button>
-      <button onClick={decrement}>Decrement</button>
+      <button
+        onClick={() => {
+          if (counter == 0) return;
+          decrement();
+        }}
+      >
+        Decrement
+      </button>
     </>
   );
 }

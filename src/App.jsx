@@ -1,27 +1,39 @@
 import Counter from "./components/Counter";
 import ChangeHeading from "./components/ChangeHeading";
+import ToogleText from "./components/ToogleText";
+import InputField from "./components/InputField";
+import ShowHideText from "./components/ShowHideText";
+import { useState } from "react";
+import MouseEvent from "./components/MouseEvent";
 
 function App2() {
+  const [color, setColor] = useState("grey");
+  const [toggle, setToggle] = useState(false);
+
   return (
-    <>
-      <ChangeHeading />
-      <Counter />
-
-      {/*onclick == html , camel case => onClick   ,   fun() => html*/}
-
-      {/* <button onClick={change}>Change heading</button> */}
-
-      {/* <button onClick={() => change()}>Change heading</button> */}
-      {/* <button
+    <div
+      style={{ backgroundColor: toggle ? "lightblue" : "grey", margin: "0px" }}
+    >
+      <button
         onClick={() => {
-          setHeading("My paragraph");
-          // change();
-          // heading = "Paragraph";
+          // setColor("red");
+          setToggle(!toggle);
         }}
       >
-        Change heading
-      </button> */}
-    </>
+        Change Color
+      </button>
+      <ChangeHeading />
+      <hr />
+      <Counter />
+      <hr />
+      <ToogleText />
+      <hr />
+      <InputField />
+      <hr />
+      <ShowHideText />
+      <hr />
+      <MouseEvent />
+    </div>
   );
 }
 
