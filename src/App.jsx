@@ -7,6 +7,10 @@ import { useState } from "react";
 import MouseEvent from "./components/MouseEvent";
 
 function App2() {
+  const handleKeyEvent = (e) => {
+    console.log("key Press : ", e.key);
+  };
+
   const [color, setColor] = useState("grey");
   const [toggle, setToggle] = useState(false);
 
@@ -14,6 +18,11 @@ function App2() {
     <div
       style={{ backgroundColor: toggle ? "lightblue" : "grey", margin: "0px" }}
     >
+      <input
+        type="text"
+        onKeyPress={handleKeyEvent}
+        placeholder="please chup raho"
+      />
       <button
         onClick={() => {
           // setColor("red");
